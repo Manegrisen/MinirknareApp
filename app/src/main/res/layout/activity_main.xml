@@ -13,14 +13,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3" >
+        android:layout_weight="3"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:paddingRight="30dp"
+            android:textAlignment="textEnd"
+            android:layout_weight="1"
             android:textColor="@color/white"
-            android:text="Miniräknar Resultat"
-            android:textSize="30sp"/>
+            android:text="2+3"
+            android:layout_gravity="end"
+            android:textSize="30sp"
+            android:id="@+id/arbetesTextview"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:paddingRight="30dp"
+            android:text="5"
+            android:textSize="45sp"
+            android:id="@+id/resultatTextView"/>
 
     </LinearLayout>
 
@@ -40,9 +57,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="clearOnClick"
                 android:textSize="@dimen/MiniButtonTextSize"
-                android:background="@color/red"
-                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/red"
                 android:text="C">
             </Button>
 
@@ -50,8 +68,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="bracketsOnClick"
                 android:textSize="@dimen/MiniButtonTextSize"
-                android:background="@null"
+                android:backgroundTint="@color/black"
                 android:textColor="@color/white"
                 android:text="()">
             </Button>
@@ -60,8 +79,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="powerOfOnClick"
                 android:textSize="@dimen/MiniButtonTextSize"
-                android:background="@null"
+                android:backgroundTint="@color/black"
                 android:textColor="@color/white"
                 android:text="^">
             </Button>
@@ -70,14 +90,208 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="divisionOnClick"
                 android:textSize="@dimen/MiniButtonTextSize"
-                android:background="@null"
-                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/orange"
                 android:text="/">
             </Button>
 
         </LinearLayout>
-        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="sevenOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="7">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="eightOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="8">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="nineOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="9">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="multipleOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/orange"
+                android:text="X">
+            </Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="fourOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="4">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="fiveOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="5">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="sixOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="6">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="negativeOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/orange"
+                android:text="-">
+            </Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="oneOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="1">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="twoOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="2">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="threeOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="3">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="addOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/orange"
+                android:text="+">
+            </Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="dotOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text=".">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="zeroOnClick"
+                android:textSize="@dimen/MiniButtonTextSize"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="0">
+            </Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:onClick="equalsOnClick"
+                android:textSize="40sp"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="=">
+            </Button>
+
+        </LinearLayout>
     </LinearLayout>
 
 
