@@ -23,7 +23,7 @@
             android:textAlignment="textEnd"
             android:layout_weight="1"
             android:textColor="@color/white"
-            android:text="2+3"
+            android:text="@string/start_expression"
             android:layout_gravity="end"
             android:textSize="30sp"
             android:id="@+id/arbetesTextview"/>
@@ -35,7 +35,7 @@
             android:textColor="@color/white"
             android:layout_gravity="end"
             android:paddingRight="30dp"
-            android:text="5"
+            android:text="@string/start_result"
             android:textSize="45sp"
             android:id="@+id/resultatTextView"/>
 
@@ -73,17 +73,6 @@
                 android:backgroundTint="@color/black"
                 android:textColor="@color/white"
                 android:text="()">
-            </Button>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="powerOfOnClick"
-                android:textSize="@dimen/MiniButtonTextSize"
-                android:backgroundTint="@color/black"
-                android:textColor="@color/white"
-                android:text="^">
             </Button>
 
             <Button

@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
             Context.exit()
         } catch (e: Exception) {
-            resultatTV.text = "Error"
+            resultatTV.text = getString(R.string.error)
         }
     }
     fun clearOnClick(view: View) {
@@ -76,10 +76,8 @@ class MainActivity : AppCompatActivity() {
         arbetets = "";
         resultatTV.setText("");
     }
-    fun bracketsOnClick(view: View) {}
-    fun powerOfOnClick(view: View)
-    {
-        setArbetets("^");
+    fun bracketsOnClick(view: View) {
+        setArbetets("()");
     }
 
 
